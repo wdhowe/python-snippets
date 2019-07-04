@@ -1,5 +1,7 @@
 """
 Unit tests for the distrodb class
+Uses setup and teardown functions to avoid doing something
+expensive like initializing a database multiple times.
 """
 
 # Import the DistroDB class for object testing
