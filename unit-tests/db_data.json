@@ -1,0 +1,29 @@
+{
+    "distros": [
+        {
+            "id": 0,
+            "name": "mx linux",
+            "rank": 1
+        },
+        {
+            "id": 1,
+            "name": "manjaro",
+            "rank": 2
+        },
+        {
+            "id": 2,
+            "name": "mint",
+            "rank": 3
+        },
+        {
+            "id": 3,
+            "name": "elementary",
+            "rank": 4
+        },
+        {
+            "id": 4,
+            "name": "ubuntu",
+            "rank": 5
+        }
+    ]
+}
