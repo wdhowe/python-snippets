@@ -6,12 +6,23 @@ These unit tests were written for pytest.
 Install pytest via pip: pip install pytest
 """
 
+# function to test
 import my_math
 
 def test_add_it():
     """Test the my_math add_it function"""
     total = my_math.add_it(5, 2)
     assert total == 7
+    assert total > 5
+    assert total < 10
+    assert type(total) is int
+
+def test_add_it_strings():
+    """Test the my_math add_it function with strings"""
+    total = my_math.add_it("hello", " world")
+    assert total == "hello world"
+    assert "hi" not in total
+    assert type(total) is str
 
 def test_subtract_it():
     """Test the my_math subtract_it function"""
