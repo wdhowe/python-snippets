@@ -9,6 +9,7 @@ Unit test examples.
 - my_math.py -> Simple math calculations in order to use with test_my_math.py
 - test_my_math.py -> Example unit tests, run tests with: 'pytest -v test_my_math.py'
 - test_with_decorators_my_math.py -> -> Example unit tests with decorators
+- test_with_parametrize.py -> Example unit tests with parameters
 
 ----
 
