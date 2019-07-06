@@ -6,6 +6,10 @@ Unit test examples.
 
 ## Files
 
+- db_data.json -> Pretend database file used in distrodb_class.py
+- distrodb_class.py -> Class to test.
+- test_distrodb_class_fixture.py -> Testing distrodb with pytest's fixture
+- test_distrodb_class_setup_teardown.py -> Testing distrodb with setup/teardown functions
 - my_math.py -> Simple math calculations in order to use with test_my_math.py
 - test_my_math.py -> Example unit tests, run tests with: 'pytest -v test_my_math.py'
 - test_with_decorators_my_math.py -> -> Example unit tests with decorators
