@@ -1,0 +1,21 @@
+---
+# GitLab CI Job
+# Check python files syntax and security
+image: python:3.7
+
+stages:
+    - build
+    - test
+
+install packages:
+    stage: build
+    script: pip install bandit black
+
+test script syntax:
+    stage: test
+    script: black --check *.py
+
+test script security:
+    stage: test
+    script: bandit *.py
+...
