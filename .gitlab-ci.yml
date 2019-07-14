@@ -3,19 +3,38 @@
 # Check python files syntax and security
 image: python:3.7
 
+# Change pip's cache directory to be inside the project directory since we can
+# only cache local items.
+variables:
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+# Pip's cache doesn't store the python packages
+# To also cache the installed packages, install
+# them in a virtualenv and cache it as well.
+cache:
+    paths:
+        - .cache/pip
+        - venv/
+
+before_script:
+    - python -V
+    - pip install virtualenv
+    - virtualenv venv
+    - source venv/bin/activate
+
 stages:
     - build
     - test
 
-install packages:
+build:install packages:
     stage: build
     script: pip install bandit black
 
-test script syntax:
+test:script syntax:
     stage: test
     script: black --check *.py
 
-test script security:
+test:test script security:
     stage: test
     script: bandit *.py
 ...
