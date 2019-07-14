@@ -1,6 +1,8 @@
 ---
 # GitLab CI Job
 # Check python files syntax and security
+
+# Docker image python 3.7
 image: python:3.7
 
 # Change pip's cache directory to be inside the project directory since we can
@@ -11,11 +13,13 @@ variables:
 # Pip's cache doesn't store the python packages
 # To also cache the installed packages, install
 # them in a virtualenv and cache it as well.
+# This allows multiple stages to use the same venv.
 cache:
     paths:
         - .cache/pip
         - venv/
 
+# Setup the Python virtualenv
 before_script:
     - python -V
     - pip install virtualenv
@@ -27,14 +31,18 @@ stages:
     - test
 
 build:install packages:
+    # Install required packages for testing
     stage: build
     script: pip install bandit black
 
 test:script syntax:
+    # Check syntax and formatting
     stage: test
     script: black --check *.py
 
 test:test script security:
+    # Check for security issues - warn about them
     stage: test
+    allow_failure: true
     script: bandit *.py
 ...
