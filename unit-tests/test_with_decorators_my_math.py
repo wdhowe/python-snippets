@@ -20,7 +20,8 @@ import sys
 # @pytest.mark.skip("Do not run this test for now.") = test will be skipped
 # @pytest.mark.skipif(
 #    sys.version_info < (3, 0), reason="Do not run this test if python version is < 3.0"
-#) = test will be skipped if condition is met
+# ) = test will be skipped if condition is met
+
 
 @pytest.mark.groupA
 def test_add_it():
