@@ -40,6 +40,9 @@ test:script syntax:
     stage: test
     cache:
         policy: pull
+        paths:
+            - .cache/pip
+            - venv/
     script:
         - black --check *.py
         - black --check unit-tests/*.py
@@ -49,6 +52,9 @@ test:test script security:
     stage: test
     cache:
         policy: pull
+        paths:
+            - .cache/pip
+            - venv/
     allow_failure: true
     script: bandit --recursive *.py
 ...
