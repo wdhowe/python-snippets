@@ -38,11 +38,17 @@ build:install packages:
 test:script syntax:
     # Check syntax and formatting
     stage: test
-    script: black --check $(find . -name "*.py")
+    cache:
+        policy: pull
+    script:
+        - black --check *.py
+        - black --check unit-tests/*.py
 
 test:test script security:
     # Check for security issues - warn about them
     stage: test
+    cache:
+        policy: pull
     allow_failure: true
     script: bandit --recursive *.py
 ...
