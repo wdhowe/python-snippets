@@ -38,11 +38,11 @@ build:install packages:
 test:script syntax:
     # Check syntax and formatting
     stage: test
-    script: "black --check $(find . -name *.py)"
+    script: black --check $(find . -name "*.py")
 
 test:test script security:
     # Check for security issues - warn about them
     stage: test
     allow_failure: true
-    script: "bandit --recursive *.py"
+    script: bandit --recursive *.py
 ...
