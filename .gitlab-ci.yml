@@ -2,59 +2,30 @@
 # GitLab CI Job
 # Check python files syntax and security
 
-# Docker image python 3.7
-image: python:3.7
-
-# Change pip's cache directory to be inside the project directory since we can
-# only cache local items.
-variables:
-    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
-
-# Pip's cache doesn't store the python packages
-# To also cache the installed packages, install
-# them in a virtualenv and cache it as well.
-# This allows multiple stages to use the same venv.
-cache:
-    paths:
-        - .cache/pip
-        - venv/
-
-# Setup the Python virtualenv
-before_script:
-    - python -V
-    - pip install virtualenv
-    - virtualenv venv
-    - source venv/bin/activate
+# Docker image based on latest python 3
+image: whowe/py3tester
 
 stages:
     - build
     - test
 
-build:install packages:
-    # Install required packages for testing
+build:verify packages:
+    # Verify required packages for testing
     stage: build
-    script: pip install bandit black
+    script:
+        - "which bandit"
+        - "which black"
 
 test:script syntax:
     # Check syntax and formatting
     stage: test
-    cache:
-        policy: pull
-        paths:
-            - .cache/pip
-            - venv/
     script:
-        - black --check *.py
-        - black --check unit-tests/*.py
+        - "black --check *.py"
+        - "black --check unit-tests/*.py"
 
 test:test script security:
     # Check for security issues - warn about them
     stage: test
-    cache:
-        policy: pull
-        paths:
-            - .cache/pip
-            - venv/
     allow_failure: true
-    script: bandit --recursive *.py
+    script: "bandit --recursive *.py"
 ...
