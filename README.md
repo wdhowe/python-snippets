@@ -12,17 +12,17 @@ Snippets of python code to showcase examples of certain concepts.
 
 ## Files
 
-- home-path.py -> Display current user's home path
-- flask-systems-list.py -> Simple Flask app using restful API endpoints
-- key-value-config.py -> Use keys and values from config files
-- list-dictionaries-with-list.py -> Nested list,dict,list data structure example
-- logging-example.py -> Using syslog functionality in Python scripts
-- print-status-msg.py -> Display status messages via print buffer flush
-- random-character-test.py -> Generate random characters for a string
-- requests-xkcd.py -> Using the requests module to retrieve website data
+- home_path.py -> Display current user's home path
+- flask_systems_list.py -> Simple Flask app using restful API endpoints
+- key_value_config.py -> Use keys and values from config files
+- list_dictionaries_with_list.py -> Nested list,dict,list data structure example
+- logging_example.py -> Using syslog functionality in Python scripts
+- print_status_msg.py -> Display status messages via print buffer flush
+- random_character_test.py -> Generate random characters for a string
+- requests_xkcd.py -> Using the requests module to retrieve website data
 - sockets_client.py -> Basic socket client, connects to server
 - sockets_server.py -> Basic socket server, accepts client connections
-- string-matching.py -> Different ways to match/search strings
-- try-except.py -> Show try,except,finally examples
-- word-count.py -> Count occurences of words in a list
+- string_matching.py -> Different ways to match/search strings
+- try_except.py -> Show try,except,finally examples
+- word_count.py -> Count occurences of words in a list
 
