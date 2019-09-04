@@ -17,6 +17,7 @@ Snippets of python code to showcase examples of certain concepts.
 - key_value_config.py -> Use keys and values from config files
 - list_dictionaries_with_list.py -> Nested list,dict,list data structure example
 - logging_example.py -> Using syslog functionality in Python scripts
+- print_file_pythonic.py -> Print a file line by line with automatic closing
 - print_status_msg.py -> Display status messages via print buffer flush
 - random_character_test.py -> Generate random characters for a string
 - requests_xkcd.py -> Using the requests module to retrieve website data
