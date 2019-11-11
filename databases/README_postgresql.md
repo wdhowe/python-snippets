@@ -8,13 +8,15 @@ Install postgres db, client
 sudo apt install postgresql postgresql-client
 ```
 
-Python: Install library required for Python's pyscopg2
+## Python Setup
+
+Install library required for Python's pyscopg2
 
 ```bash
 sudo apt install libpq-dev
 ```
 
-Python: Install Python3 psycogp2
+Install Python3 psycogp2
 
 ```bash
 pip3 install psycopg2 --user
