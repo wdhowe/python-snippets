@@ -1,4 +1,4 @@
-# Database Setup
+# Postgres Database Setup
 
 ## Install Packages
 
