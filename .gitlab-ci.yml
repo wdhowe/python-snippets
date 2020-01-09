@@ -3,7 +3,7 @@
 # Check python files syntax and security
 
 # Docker image based on latest python 3
-image: whowe/py3tester
+image: wdhowe/py3tester
 
 stages:
     - build
