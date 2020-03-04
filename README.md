@@ -17,6 +17,7 @@ Snippets of python code to showcase examples of certain concepts.
 - key_value_config.py -> Use keys and values from config files
 - list_dictionaries_with_list.py -> Nested list,dict,list data structure example
 - logging_example.py -> Using syslog functionality in Python scripts
+- marathon-app-dump.py -> Dump Marathon App config to a JSON file, providing a backup.
 - print_file_pythonic.py -> Print a file line by line with automatic closing
 - print_status_msg.py -> Display status messages via print buffer flush
 - random_character_test.py -> Generate random characters for a string
@@ -24,6 +25,7 @@ Snippets of python code to showcase examples of certain concepts.
 - sockets_client.py -> Basic socket client, connects to server
 - sockets_server.py -> Basic socket server, accepts client connections
 - string_matching.py -> Different ways to match/search strings
+- template.py -> Template for Python scripting. Main function and argparse.
 - try_except.py -> Show try,except,finally examples
 - word_count.py -> Count occurences of words in a list
 
